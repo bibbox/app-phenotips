@@ -1,0 +1,36 @@
+version: '2'
+services:
+
+  phenotips-§§INSTANCE:
+    image: bibbox/phenotips
+    container_name:  phenotips-§§INSTANCE
+    links:
+      - phenotips-db-§§INSTANCE::phenotips-db-§§INSTANCE
+    ports:
+      - "8098:8080"
+    depends_on:
+      - phenotips-db-§§INSTANCE
+      - phenotips-data-§§INSTANCE
+    volumes_from: 
+      - phenotips-data-§§INSTANCE
+
+  phenotips-db-§§INSTANCE:
+    image: mysql
+    container_name: phenotips-db-§§INSTANCE
+    user: root
+    environment:
+      - MYSQL_ROOT_PASSWORD=§§MYSQL_ROOT_PASSWORD
+      - MYSQL_DATABASE=§§MYSQL_DATABASE
+      - MYSQL_USER=§§MYSQL_USER
+      - MYSQL_PASSWORD=§§MYSQL_PASSWORD
+    volumes_from: 
+      - phenotips-data-§§INSTANCE
+    depends_on:
+      - phenotips-data-§§INSTANCE
+
+  phenotips-data-§§INSTANCE:
+    image: bibbox/phenotips-data
+    container_name: phenotips-data-§§INSTANCE
+    volumes:
+      - §§FOLDER/var/lib/mysql:/var/lib/mysql
+      
