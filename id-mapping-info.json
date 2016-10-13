@@ -1,0 +1,11 @@
+{
+    "documentation" : "https://phenotips.org/DevGuide/RESTfulAPI",
+    "mapping" : {
+    
+    "PATIENT" : {
+        "human_readable": "'/P%d'", %1"
+        "get_all":    "'/rest/patients'",
+        "get_info":   "'/rest/patient/%d',%1",
+        }
+    }
+}

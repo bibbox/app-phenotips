@@ -25,7 +25,7 @@ RUN sed -i 's/redirectPort="8443"/redirectPort="8443" URIEncoding="UTF-8"/g' /us
     && sed -i 's/# xwiki.store.attachment.recyclebin.hint=hibernate/xwiki.store.attachment.recyclebin.hint=file/g' /usr/local/tomcat/webapps/ROOT/WEB-INF/xwiki.cfg
     
 
-COPY hibernate.cfg.xml /usr/local/tomcat/webapps/ROOT/WEB-INF/hibernate.cfg.xml
+COPY configs/hibernate.cfg.xml /usr/local/tomcat/webapps/ROOT/WEB-INF/hibernate.cfg.xml
 
 CMD ["/opt/bibbox-scripts/entrypoint.sh"]
     
