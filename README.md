@@ -43,5 +43,5 @@
 
 * Change the admin password and continue with your configuration, as described at https://phenotips.org/AdminGuide/UserAdministration
 
-![Screenshot04](install-screen-04b.png)
+![Screenshot04](install-screen-04.png)
 
