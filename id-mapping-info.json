@@ -2,20 +2,20 @@
 	"documentation": "https://phenotips.org/DevGuide/RESTfulAPI",
 	"mappings": {
 		"PATIENT": {
-			"human_readable": ["var appname = &&an;",
-				"var p1      = &&p1;",
-				"var result  = 'https://' + appname + '/bin/ + p1;",
+			"human_readable": ["var appID = &&aid;",
+				"var localId1      = &&id1;",
+				"var result        = 'https://' + appID + '/bin/ + localId1;",
 				"println(result);"
 			],
 
-			"get_all": ["var appname = &&an;",
-				"var result  = 'https://' + appname + '/rest/patients';",
+			"get_all": ["var appID = &&aid;",
+				"var result  = 'https://' + appID + '/rest/patients';",
 				"println(result);"
 			],
 
-			"get_info": ["var appname = &&an;",
-				"var p1      = &&p1;",
-				"var result  = 'https://' + appname + '/rest/patients/' + p1;",
+			"get_info": ["var appID = &&aid;",
+				"var localId1      = &&id1;",
+				"var result        = 'https://' + appID + '/rest/patients/' + localId1;",
 				"println(result);"
 			]
 		}
