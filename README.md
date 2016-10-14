@@ -22,7 +22,7 @@
 
 ## Installation Instructions 
 
-* start yourapplication 
+* start your application in the dashboard
 * phenotips will first intitialize its database (can take some minutes)
 * in the distrubution wizard click on **CONTINUE**
 
