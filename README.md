@@ -49,6 +49,6 @@ https://raw.githubusercontent.com/bibbox/app-phenotips/tree/alpha.0.1/master/ins
 
 ## After the installation
 
-Have a nice ride with the new Admins yountimer.
+Have a nice ride with the new Admins youngtimer.
 
 ![FINAL](install-screen-final.jpg)
