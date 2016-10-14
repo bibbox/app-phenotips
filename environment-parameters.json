@@ -1,0 +1,37 @@
+[{
+	"id": "MYSQL_ROOT_PASSWORD",
+	"display_name": "mySQL root password",
+	"description": "root password of the mySQL database, only visible within the container, can be a short, medium secure password",
+	"default_value": "",
+	"type": "PASSWORD",
+	"visible": "YES",
+	"min_length": "1",
+	"max_length": "128"
+}, {
+	"id": "MYSQL_DATABASE",
+	"display_name": "mySQL database name",
+	"description": "mySQL database name for phenotips",
+	"default_value": "phenotips",
+	"type": "STRING",
+	"visible": "YES",
+	"min_length": "1",
+	"max_length": "128"
+}, {
+	"id": "MYSQL_USER",
+	"display_name": "mySQL user",
+	"description": "name of mySQL user for the phenotips DB",
+	"default_value": "phenotips",
+	"type": "STRING",
+	"visible": "YES",
+	"min_length": "1",
+	"max_length": "128"
+}, {
+	"id": "MYSQL_PASSWORD",
+	"display_name": "mySQL root password",
+	"description": "user password of the mySQL database, only visible within the container, can be a short, medium secure password",
+	"default_value": "",
+	"type": "PASSWORD",
+	"visible": "YES",
+	"min_length": "1",
+	"max_length": "128"
+}]
