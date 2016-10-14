@@ -29,7 +29,7 @@ services:
       - phenotips-data-§§INSTANCE
 
   phenotips-data-§§INSTANCE:
-    image: bibbox/phenotips-data
+    image: busybox
     container_name: phenotips-data-§§INSTANCE
     volumes:
       - §§FOLDER/var/lib/mysql:/var/lib/mysql
