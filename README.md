@@ -32,7 +32,7 @@
 
 ![Screenshot02](install-screen-02.png)
 
-* press **CONTINUE** (further Phenotips components are now downloaded), possible you run in a timeout, dont worry just login and the downloaf of the components will continue
+* press **CONTINUE**. Further Phenotips components are now downloaded, maybe you run in a timeout, dont worry just login and the download of the components will continue
 
 * INITIAL-USER:   Admin
 * INITIAL-PASWORD admin
@@ -41,8 +41,7 @@
 
 ![Screenshot03](install-screen-03.png)
 
-* At first change the admin password and continue with your configuration
-* https://phenotips.org/AdminGuide/UserAdministration
+* Change the admin password and continue with your configuration, as described at https://phenotips.org/AdminGuide/UserAdministration
 
 ![Screenshot04](install-screen-04.png)
 
