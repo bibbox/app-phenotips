@@ -45,3 +45,10 @@
 
 ![Screenshot04](install-screen-04.png)
 
+https://raw.githubusercontent.com/bibbox/app-phenotips/tree/alpha.0.1/master/install-screen-04.png
+
+## After the installation
+
+Have a nice ride with the new Admins yountimer.
+
+![FINAL](install-screen-final.jpg)
