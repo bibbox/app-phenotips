@@ -26,11 +26,11 @@
 * phenotips will first intitialize its database (can take some minutes)
 * in the distrubution wizard click on <CONTINUE>
 
-[Screenshot01](install-screen-01.png)
+![Screenshot01](install-screen-01.png)
 
 * install the Phenotips Application interface by pressing <INSTALL> (this can take several minutes, up to a hour depending on your internet connectivity) 
 
-[Screenshot02](install-screen-02.png)
+![Screenshot02](install-screen-02.png)
 
 * press <CONTINUE> (further Phenotips components are now downloaded), possible you run in a timeout, dont worry just login and the downloaf of the components will continue
 
@@ -39,10 +39,10 @@
 
 * press >COINTINUE> in some screens and you should arive at
 
-[Screenshot03](install-screen-03.png)
+![Screenshot03](install-screen-03.png)
 
 * At first change the admin password and continue with your configuration
 * https://phenotips.org/AdminGuide/UserAdministration
 
-[Screenshot04](install-screen-04.png)
+![Screenshot04](install-screen-04.png)
 
