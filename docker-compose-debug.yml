@@ -6,6 +6,7 @@ services:
     container_name:  phenotips-debug
     links:
       - phenotips-db-debug:phenotips
+
     ports:
       - "8098:8080"
     depends_on:
@@ -13,6 +14,21 @@ services:
       - phenotips-data-debug
     volumes_from: 
       - phenotips-data-debug
+
+
+  phenotips-extapi-debug:
+    build: 
+        context: ./images/phenotips-extapi
+    image: bibbox/phenotips-extapi
+    container_name:   phenotips-extapi-debug
+    links:
+      - phenotips-debug:phenotips
+    depends_on:
+      - phenotips-data-debug
+    volumes_from: 
+      - phenotips-data-debug
+    ports:
+      - "8099:8000"
 
   phenotips-db-debug:
     image: mysql
@@ -33,4 +49,4 @@ services:
     container_name: phenotips-data-debug
     volumes:
       - /Users/mue/dockerdata/phenotips/var/lib/mysql:/var/lib/mysql
-      
+      - /Users/mue/dockerdata/phenotips/extapi:/project/src 
