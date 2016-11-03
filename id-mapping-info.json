@@ -1,5 +1,5 @@
 {
-	"documentation": "https://phenotips.org/DevGuide/RESTfulAPI",
+	"documentation": ["https://phenotips.org/DevGuide/RESTfulAPI"],
 	"mappings": {
 		"PATIENT": {
 			"human_readable": ["var appID = &&aid;",
