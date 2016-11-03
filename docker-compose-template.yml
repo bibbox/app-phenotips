@@ -7,12 +7,26 @@ services:
     links:
       - §§INSTANCE-phenotips-db::§§INSTANCE-phenotips-db
     ports:
-      - "8098:8080"
+      - "§§PORT1:8080"
     depends_on:
       - §§INSTANCE-phenotips-db
       - §§INSTANCE-phenotips-data
     volumes_from: 
       - §§INSTANCE-phenotips-data
+
+  §§INSTANCE-phenotips-extapi:
+    build: 
+        context: ./images/phenotips-extapi
+    image: bibbox/phenotips-extapi
+    container_name:   §§INSTANCE-phenotips-extapi
+    links:
+      - §§INSTANCE-phenotips-data:phenotips
+    depends_on:
+      - §§INSTANCE-phenotips-data
+    volumes_from: 
+      - §§INSTANCE-phenotips-data
+    ports:
+      - "§§PORT2:8000"
 
   §§INSTANCE-phenotips-db:
     image: mysql
