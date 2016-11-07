@@ -77,14 +77,14 @@ createFolders()
     echo "Create folders within $folder"
     if [[ ! -d "$folder" ]]; then
         echo "Creating Installation Folder"
-        mkdir -p "$folder/images"
+        mkdir -p "$folder/images/phenotips-extapi"
         mkdir -p "$folder/var/lib/mysql"
-        mkdir -p "$folder/extapi"
+        mkdir -p "$folder/phenotips/extapi"
     fi
 #
 # COPY 
-    cp images/phenotips-extapi  "$folder/images"    
-    cp images/phenotips-extapi/src/* "$folder/extapi"   
+    cp -R images/phenotips-extapi/*  "$folder/images/phenotips-extapi/"    
+    cp -R images/phenotips-extapi/src/* "$folder/phenotips/extapi"   
 
 }
 
