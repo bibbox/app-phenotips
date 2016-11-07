@@ -68,7 +68,7 @@ updateConfigurationFile()
     sed -i "s/§§MYSQL_DATABASE/${MYSQL_DATABASE}/g" "$folder/docker-compose.yml"
     sed -i "s/§§MYSQL_USER/${MYSQL_USER}/g" "$folder/docker-compose.yml"
     sed -i "s#§§MYSQL_PASSWORD#${MYSQL_PASSWORD}#g" "$folder/docker-compose.yml"
-    sed -i "s/§§PORT_EXTAPI/${PORT_EXTAPI}/g" "$folder/docker-compose.yml"
+    sed -i "s/§§EXTAPI_PORT/${EXTAPI_PORT}/g" "$folder/docker-compose.yml"
 }
 
 createFolders()
@@ -104,8 +104,8 @@ while [ "$1" != "" ]; do
         --MYSQL_USER )          shift
                                 MYSQL_USER=$1
                                 ;;   
-        --PORT_EXTAPI )         shift
-                                PORT_EXTAPI=$1
+        --EXTAPI_PORT )         shift
+                                EXTAPI_PORT=$1
                                 ;;                    
         --MYSQL_PASSWORD )      shift
                                 MYSQL_PASSWORD=$1

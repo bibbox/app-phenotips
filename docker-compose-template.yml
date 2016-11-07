@@ -26,7 +26,7 @@ services:
     volumes_from: 
       - §§INSTANCE-phenotips-data
     ports:
-      - "§§PORT_EXTAPI:8000"
+      - "§§EXTAPI_EXTAPI:8000"
 
   §§INSTANCE-phenotips-db:
     image: mysql
