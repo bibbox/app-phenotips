@@ -47,9 +47,7 @@ checkParametersAndWriteLog()
         error_exit "The my sql user is not set."
     else
         echo "Mysql root passwort: $MYSQL_USER"
-    fi  
-    
-    
+    fi   
 }
 
 updateConfigurationFile()
@@ -64,10 +62,6 @@ updateConfigurationFile()
     sed -i  "s/§§PORT/${port}/g" "$folder/docker-compose.yml"
   # CHANGE  
   # TODO special characters in passwords 
-    sed -i "s#§§MYSQL_ROOT_PASSWORD#${MYSQL_ROOT_PASSWORD}#g" "$folder/docker-compose.yml"
-    sed -i "s/§§MYSQL_DATABASE/${MYSQL_DATABASE}/g" "$folder/docker-compose.yml"
-    sed -i "s/§§MYSQL_USER/${MYSQL_USER}/g" "$folder/docker-compose.yml"
-    sed -i "s#§§MYSQL_PASSWORD#${MYSQL_PASSWORD}#g" "$folder/docker-compose.yml"
     sed -i "s/§§EXTAPI_PORT/${EXTAPI_PORT}/g" "$folder/docker-compose.yml"
 }
 
@@ -101,21 +95,9 @@ while [ "$1" != "" ]; do
         -p | --port )           shift
                                 port=$1
                                 ;;
-        --MYSQL_ROOT_PASSWORD ) shift
-                                MYSQL_ROOT_PASSWORD=$1
-                                ;;
-        --MYSQL_DATABASE )      shift
-                                MYSQL_DATABASE=$1
-                                ;;
-        --MYSQL_USER )          shift
-                                MYSQL_USER=$1
-                                ;;   
-        --EXTAPI_PORT )         shift
+         --EXTAPI_PORT )         shift
                                 EXTAPI_PORT=$1
                                 ;;                    
-        --MYSQL_PASSWORD )      shift
-                                MYSQL_PASSWORD=$1
-                                ;;
     esac
     shift
 done
