@@ -1,7 +1,7 @@
 [{
 	"id": "MYSQL_ROOT_PASSWORD",
 	"display_name": "mySQL root password",
-	"description": "root password of the mySQL database, only visible within the container, can be a short, medium secure password",
+	"description": "root password of the mySQL database, only visible within the container, can be a short, medium secure password, $ and # signs are not allowed!",
 	"default_value": "",
 	"type": "PASSWORD",
 	"visible": "YES",
@@ -28,7 +28,7 @@
 }, {
 	"id": "MYSQL_PASSWORD",
 	"display_name": "mySQL root password",
-	"description": "user password of the mySQL database, only visible within the container, can be a short, medium secure password",
+	"description": "user password of the mySQL database, only visible within the container, can be a short, medium secure password, $ and # are not allowed!",
 	"default_value": "",
 	"type": "PASSWORD",
 	"visible": "YES",
