@@ -5,7 +5,7 @@ services:
     image: bibbox/phenotips
     container_name:  §§INSTANCE-phenotips
     links:
-      - §§INSTANCE-phenotips-db:§§INSTANCE-phenotips-db
+      - §§INSTANCE-phenotips-db:phenotips-db
     ports:
       - "§§PORT:8080"
     depends_on:
