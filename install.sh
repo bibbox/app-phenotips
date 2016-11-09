@@ -38,16 +38,7 @@ checkParametersAndWriteLog()
         echo "Port: $port"
     fi 
 # ADD CUSTOm CHECKS AN LOSs as YOU LIKE
-    if [[ -z "$MYSQL_ROOT_PASSWORD" ]]; then
-        error_exit "The my sql root password is not set."
-    else
-        echo "Mysql root passwort: ****"
-    fi  
-      if [[ -z "$MYSQL_USER" ]]; then
-        error_exit "The my sql user is not set."
-    else
-        echo "Mysql root passwort: $MYSQL_USER"
-    fi   
+
 }
 
 updateConfigurationFile()
