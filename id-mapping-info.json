@@ -3,23 +3,36 @@
 	"mappings": {
 		"SUBJECT": {
 			"human_readable": [
-                "(function() {",
+                "(",
+                "function() {",
                 "var appID = '&&aid';",
 				"var localId1      = '&&id1';",
-				"var result        = 'https://' + appID + '/bin/' + localId1;",
+				"var result        = 'http://' + appID + '/bin/' + localId1;",
 				"return result;",
-                "})()"
+                "}",
+                ")()"
 			],
 
-			"get_all": ["var appID = '&&aid';",
+			"get_all": [
+                "(",
+                "function() {",
+                "var appID = '&&aid';",
 				"var result  = 'https://' + appID + '/rest/patients';",
-				"console.log(result)"
+				"console.log(result)",
+                "return result;",
+                "}",
+                ")()"
 			],
 
-			"get_info": ["var appID = '&&aid';",
+			"get_info": [
+                "(",
+                "function() {",
+                "var appID = '&&aid';",
 				"var localId1      = '&&id1';",
 				"var result        = 'https://' + appID + '/rest/patients/' + localId1;",
-				"console.log(result)"
+				"console.log(result)",
+                "}",
+                ")()"
 			]
 		}
 	}
