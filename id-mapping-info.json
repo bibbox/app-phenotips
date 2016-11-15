@@ -17,7 +17,7 @@
                 "(",
                 "function() {",
                 "var appID = '&&aid';",
-				"var result  = 'https://' + appID + '/rest/patients';",
+				"var result  = 'http://' + appID + '/rest/patients';",
                 "return result;",
                 "}",
                 ")()"
@@ -28,7 +28,7 @@
                 "function() {",
                 "var appID = '&&aid';",
 				"var localId1      = '&&id1';",
-				"var result        = 'https://' + appID + '/rest/patients/' + localId1;",
+				"var result        = 'http://' + appID + '/rest/patients/' + localId1;",
 				"return result;",
                 "}",
                 ")()"
