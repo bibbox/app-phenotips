@@ -3,12 +3,12 @@
 	"mappings": {
 		"SUBJECT": {
 			"human_readable": [
-                "function() {",
+                "(function() {",
                 "var appID = '&&aid';",
 				"var localId1      = '&&id1';",
 				"var result        = 'https://' + appID + '/bin/' + localId1;",
 				"return result;",
-                "}"
+                "})()"
 			],
 
 			"get_all": ["var appID = '&&aid';",
