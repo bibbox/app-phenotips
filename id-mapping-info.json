@@ -18,7 +18,6 @@
                 "function() {",
                 "var appID = '&&aid';",
 				"var result  = 'https://' + appID + '/rest/patients';",
-				"console.log(result)",
                 "return result;",
                 "}",
                 ")()"
@@ -30,7 +29,7 @@
                 "var appID = '&&aid';",
 				"var localId1      = '&&id1';",
 				"var result        = 'https://' + appID + '/rest/patients/' + localId1;",
-				"console.log(result)",
+				"return result;",
                 "}",
                 ")()"
 			]
