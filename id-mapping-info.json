@@ -2,10 +2,13 @@
 	"documentation": ["https://phenotips.org/DevGuide/RESTfulAPI"],
 	"mappings": {
 		"SUBJECT": {
-			"human_readable": ["var appID = '&&aid';",
+			"human_readable": [
+                "function() {"
+                "var appID = '&&aid';",
 				"var localId1      = '&&id1';",
 				"var result        = 'https://' + appID + '/bin/' + localId1;",
-				"console.log(result);"
+				"return result;"
+                "}"
 			],
 
 			"get_all": ["var appID = '&&aid';",
