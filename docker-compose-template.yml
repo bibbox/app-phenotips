@@ -32,5 +32,5 @@ services:
     image: busybox
     container_name: §§INSTANCE-phenotips-data
     volumes:
-      - §§FOLDER/var/lib/mysql:/var/lib/mysql
-      - §§FOLDER/phenotips/extapi:/project/src 
+      - ./var/lib/mysql:/var/lib/mysql
+      - ./phenotips/extapi:/project/src 
