@@ -2,7 +2,7 @@ version: '2'
 services:
 
   §§INSTANCE-phenotips:
-    image: bibbox/phenotips
+    image: bibbox/phenotips:2.5
     container_name:  §§INSTANCE-phenotips
     links:
       - §§INSTANCE-phenotips-db:phenotips-db
@@ -15,7 +15,7 @@ services:
       - §§INSTANCE-phenotips-data
 
   §§INSTANCE-phenotips-db:
-    image: mysql
+    image: mysql:8
     container_name: §§INSTANCE-phenotips-db
     user: root
     environment:
