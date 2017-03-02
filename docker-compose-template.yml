@@ -1,9 +1,17 @@
 version: '2'
+
+networks:
+    bibbox-default-network:
+      external: true
+
 services:
 
   §§INSTANCE-phenotips:
     image: bibbox/phenotips
     container_name:  §§INSTANCE-phenotips
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
     links:
       - §§INSTANCE-phenotips-db:phenotips-db
     ports:
@@ -17,6 +25,9 @@ services:
   §§INSTANCE-phenotips-db:
     image: mysql:8
     container_name: §§INSTANCE-phenotips-db
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=thispasswordisneverusedeveninsidethecontainer
