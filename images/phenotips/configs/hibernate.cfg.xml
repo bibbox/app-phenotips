@@ -114,6 +114,7 @@
     <property name="dbcp.maxOpenPreparedStatements">20</property>
     <mapping resource="xwiki.hbm.xml"/>
     <mapping resource="feeds.hbm.xml"/>
+    <mapping resource="mailsender.hbm.xml"/>
     
 
     <!-- HSQLDB configuration.

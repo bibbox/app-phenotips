@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Starting Phenotuos Application Container!"
+echo "Starting PhenoTips Application Container!"
 
 echo "Wait for DB server to be ready"
 /opt/bibbox-scripts/waitforit.sh "phenotips-db:3306"
