@@ -13,7 +13,7 @@ RUN sed -i 's/redirectPort="8443"/redirectPort="8443" URIEncoding="UTF-8"/g' /us
     && wget https://nexus.phenotips.org/nexus/content/repositories/releases/org/phenotips/phenotips-war/1.4.9/phenotips-war-1.4.9.war  \
     && wget https://nexus.phenotips.org/nexus/content/repositories/releases/org/phenotips/solr-configuration/1.4.9/solr-configuration-1.4.9.jar \
     && unzip phenotips-war-1.4.9.war -d /opt/ROOT \
-    && sudo rm -R /usr/local/tomcat/webapps/ROOT \
+    && rm -R /usr/local/tomcat/webapps/ROOT \
     && mv /opt/ROOT /usr/local/tomcat/webapps/ \
     && mkdir -p /var/lib/phenotips \
     && unzip solr-configuration-1.4.9.jar  -d /opt/solr \
