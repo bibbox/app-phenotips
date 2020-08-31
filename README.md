@@ -15,9 +15,9 @@ Clone the github repsoitory and start the install.sh. If necessary change the po
 
 `sudo git clone https://github.com/bibbox/app-phenotips`
 
-`sudo chmod +x install.sh`
+`sudo chmod +x install-local.sh`
 
-`sudo ./install.sh`
+`sudo ./install-local.sh`
 
 
 ## Install within BIBBOX
