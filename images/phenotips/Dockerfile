@@ -19,7 +19,9 @@ RUN sed -i 's/redirectPort="8443"/redirectPort="8443" URIEncoding="UTF-8"/g' /us
     && mkdir -p /var/lib/phenotips \
     && unzip solr-configuration-1.4.9.jar  -d /opt/solr \
     && mv /opt/solr /var/lib/phenotips/ \
-    && sed -i 's/# xwiki.db=xwiki/xwiki.db=phenotips/g' /usr/local/tomcat/webapps/ROOT/WEB-INF/xwiki.cfg
+    && sed -i 's/# xwiki.db=xwiki/xwiki.db=phenotips/g' /usr/local/tomcat/webapps/ROOT/WEB-INF/xwiki.cfg \
+    && unzip /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/xwiki-platform-oldcore-7.4.6.jar -d /usr/local/tomcat/webapps/ROOT/WEB-INF/classes \
+    && sed -i 's/column="XWV_USER_AGENT" not-null="true" length="8192"/column="XWV_USER_AGENT" not-null="true" length="2048"/g' /usr/local/tomcat/webapps/ROOT/WEB-INF/classes/xwiki.hbm.xml
        
 
 COPY configs/hibernate.cfg.xml /usr/local/tomcat/webapps/ROOT/WEB-INF/hibernate.cfg.xml
