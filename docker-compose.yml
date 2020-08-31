@@ -15,7 +15,7 @@ services:
     links:
       - bibbox-phenotips-db:phenotips-db
     ports:
-      - "8077:8080"
+      - "8010:8080"
     depends_on:
       - bibbox-phenotips-db
       - bibbox-phenotips-data
