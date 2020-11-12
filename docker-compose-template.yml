@@ -18,7 +18,6 @@ services:
       - "8080"
     depends_on:
       - §§INSTANCE-phenotips-db
-      - §§INSTANCE-phenotips-data
     volumes: 
       - ./phenotips/extapi:/project/src 
 
@@ -31,10 +30,8 @@ services:
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=thispasswordisneverusedeveninsidethecontainer
-      - MYSQL_DATABASE=phenotips
-      - MYSQL_USER=phenotips
-      - MYSQL_PASSWORD=phenotips4bibbox
+      - MYSQL_DATABASE=§§MYSQLDATABASE
+      - MYSQL_USER=§§MYSQLUSER
+      - MYSQL_PASSWORD=§§MYSQLPASSWORD
     volumes: 
       - ./var/lib/mysql:/var/lib/mysql
-    depends_on:
-      - §§INSTANCE-phenotips-data
