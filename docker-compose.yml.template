@@ -1,0 +1,43 @@
+version: '3'
+
+networks:
+    bibbox-default-network:
+      external: true
+
+services:
+  §§INSTANCE-phenotips:
+    image: bibbox/phenotips
+    container_name:  §§INSTANCE-phenotips
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    links:
+      - §§INSTANCE-phenotips-db:phenotips-db
+    ports:
+      - "8010:8080"
+    depends_on:
+      - §§INSTANCE-phenotips-db
+    volumes: 
+      - ./data/phenotips/extapi:/project/src 
+    proxy:
+     TYPE: PRIMARY
+     URLPREFIX: §§INSTANCE
+     TEMPLATE: default
+     DISPLAYNAME: 'PhenoTips'  
+
+  §§INSTANCE-phenotips-db:
+    image: mariadb
+    container_name: §§INSTANCE-phenotips-db
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    user: root
+    environment:
+      - MYSQL_ROOT_PASSWORD=thispasswordisneverusedeveninsidethecontainer
+      - MYSQL_DATABASE=phenotips
+      - MYSQL_USER=phenotips
+      - MYSQL_PASSWORD=phenotips4bibbox
+    volumes:
+      - ./data/var/lib/mysql:/var/lib/mysql
+ 
+
