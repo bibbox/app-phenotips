@@ -1,4 +1,0 @@
-{
-  runningcontainers:["§§INSTANCE-phenotips", "§§INSTANCE-phenotips-db"],
-  supportcontainers:["§§INSTANCE-phenotips-extapi", "§§INSTANCE-phenotips-data"]    
-}
