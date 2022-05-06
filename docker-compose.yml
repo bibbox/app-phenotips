@@ -6,7 +6,7 @@ networks:
 
 services:
   bibbox-phenotips:
-    image: bibbox/phenotips
+    image: bibbox/phenotips:1.4.9
     container_name:  bibbox-phenotips
     restart: unless-stopped
     networks:
@@ -20,7 +20,7 @@ services:
     volumes: 
       - ./data/phenotips/extapi:/project/src 
   bibbox-phenotips-db:
-    image: mariadb
+    image: mariadb:10.7.3
     container_name: bibbox-phenotips-db
     restart: unless-stopped
     networks:
