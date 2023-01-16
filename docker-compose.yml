@@ -1,13 +1,12 @@
-version: '2'
+version: '3'
 
 networks:
     bibbox-default-network:
       external: true
 
 services:
-
   bibbox-phenotips:
-    image: bibbox/phenotips
+    image: bibbox/phenotips:1.4.9
     container_name:  bibbox-phenotips
     restart: unless-stopped
     networks:
@@ -18,12 +17,10 @@ services:
       - "8010:8080"
     depends_on:
       - bibbox-phenotips-db
-      - bibbox-phenotips-data
-    volumes_from: 
-      - bibbox-phenotips-data
-
+    volumes: 
+      - ./data/phenotips/extapi:/project/src 
   bibbox-phenotips-db:
-    image: mariadb
+    image: mariadb:10.7.3
     container_name: bibbox-phenotips-db
     restart: unless-stopped
     networks:
@@ -34,14 +31,6 @@ services:
       - MYSQL_DATABASE=phenotips
       - MYSQL_USER=phenotips
       - MYSQL_PASSWORD=phenotips4bibbox
-    volumes_from: 
-      - bibbox-phenotips-data
-    depends_on:
-      - bibbox-phenotips-data
-
-  bibbox-phenotips-data:
-    image: busybox
-    container_name: bibbox-phenotips-data
     volumes:
-      - ./var/lib/mysql:/var/lib/mysql
-      - ./phenotips/extapi:/project/src 
+      - ./data/var/lib/mysql:/var/lib/mysql
+     

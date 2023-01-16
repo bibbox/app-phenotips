@@ -1,11 +1,10 @@
-version: '2'
+version: '3'
 
 networks:
     bibbox-default-network:
       external: true
 
 services:
-
   §§INSTANCE-phenotips:
     image: bibbox/phenotips
     container_name:  §§INSTANCE-phenotips
@@ -15,12 +14,16 @@ services:
     links:
       - §§INSTANCE-phenotips-db:phenotips-db
     ports:
-      - "§§PORT:8080"
+      - "8010:8080"
     depends_on:
       - §§INSTANCE-phenotips-db
-      - §§INSTANCE-phenotips-data
-    volumes_from: 
-      - §§INSTANCE-phenotips-data
+    volumes: 
+      - ./data/phenotips/extapi:/project/src 
+    proxy:
+     TYPE: PRIMARY
+     URLPREFIX: §§INSTANCE
+     TEMPLATE: default
+     DISPLAYNAME: 'PhenoTips'  
 
   §§INSTANCE-phenotips-db:
     image: mariadb
@@ -34,14 +37,7 @@ services:
       - MYSQL_DATABASE=phenotips
       - MYSQL_USER=phenotips
       - MYSQL_PASSWORD=phenotips4bibbox
-    volumes_from: 
-      - §§INSTANCE-phenotips-data
-    depends_on:
-      - §§INSTANCE-phenotips-data
-
-  §§INSTANCE-phenotips-data:
-    image: busybox
-    container_name: §§INSTANCE-phenotips-data
     volumes:
-      - ./var/lib/mysql:/var/lib/mysql
-      - ./phenotips/extapi:/project/src 
+      - ./data/var/lib/mysql:/var/lib/mysql
+ 
+
