@@ -1,23 +1,32 @@
 # PHENOTIPS BIBBOX application
 
+PhenoTips can be installed as [BIBBOX APP](https://bibbox.readthedocs.io/en/latest/ "BIBBOX App Store") or standalone.
+
 ## Hints
 * approx. time with medium fast internet connection: **15 minutes**
 * initial user/passwordd: **Admin / admin**
 * This container can be installed as [BIBBOX APP](https://bibbox.readthedocs.io/en/latest/ "BIBBOX") or standalone. 
-* after the docker installation follow these [instructions](NSTALL-APP.md)
+* After the docker installation follow these [instructions](INSTALL-APP.md)
 
 ## Standalone Installation
 
 Clone the github repsoitory and start the install.sh. If necessary change the ports and volume mounts in `docker-compose.yml`.  
 
-`sudo git clone https://github.com/bibbox/app-phenotips`
+```
+sudo git clone https://github.com/bibbox/app-phenotips
+sudo chmod +x install.sh
+sudo ./install.sh`
+```
 
-`sudo chmod +x install.sh`
-
-`sudo ./install.sh`
+After the installation (might take a few minutes) you need to make some configuration follow these **[instructions](INSTALL-APP.md)**. 
 
 
-After the installation (might take a few minutes) you need to make some configuration follow these **[instructions](INSTALL-APP.md)**. Finally you can open **http://localhost:8010** in your browser to access PhenoTips.
+The main app can be opened at 
+
+```
+http://localhost:8010
+```
+
 
 ## Install within BIBBOX
 
