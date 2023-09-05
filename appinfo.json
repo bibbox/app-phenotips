@@ -6,6 +6,6 @@
         "short_description": "Phenotyp Editor for the HPO ontology",
 	"catalogue_url": "http://bibbox.org/software-shortlist/-/asset_publisher/NpKk4COV3bZZ/content/phenotips?_101_INSTANCE_NpKk4COV3bZZ_redirect=%2Fsoftware-shortlist",
 	"application_url": "https://phenotips.org",
-	"application_documentation_url": "https://phenotips.org/UserGuide",
+	"application_documentation_url": "https://docs.phenotips.com/",
 	"tags": ["Phenotyping", "Genetic Disorders"]
 }
