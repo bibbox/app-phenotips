@@ -1,5 +1,5 @@
 {
-	"name": "PhenoTips (stable version, used in Dev)",
+	"name": "PhenoTips",
 	"short_name": "PhenoTips",
 	"version": "v1.4.9",
 	"description": "PhenoTips® is a software tool for collecting and analyzing phenotypic information for patients with genetic disorders",
@@ -8,5 +8,5 @@
 	"application_url": "https://phenotips.org",
 	"application_documentation_url": "https://docs.phenotips.com/",
 	"tags": ["Phenotyping", "Genetic Disorders"],
-	"instance_information": "work in progress"
+	"instance_information": "(stable version, used in Dev) work in progress"
 }
