@@ -8,5 +8,5 @@
 	"application_url": "https://phenotips.org",
 	"application_documentation_url": "https://docs.phenotips.com/",
 	"tags": ["Phenotyping", "Genetic Disorders"],
-	"instance_information": "PhenoTips digitizes more aspects of medical genetics with a unified, EHR-integrated solution."
+	"instance_information": "<p> PhenoTips digitizes more aspects of medical genetics with a unified, EHR-integrated solution. </p>"
 }
